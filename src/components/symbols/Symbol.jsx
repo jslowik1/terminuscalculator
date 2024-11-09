@@ -2,7 +2,7 @@ import React from 'react';
 import {useDraggable} from '@dnd-kit/core';
 import {CSS} from '@dnd-kit/utilities';
 
-const Draggable = (props) => {
+const Symbol = (props) => {
     const image = require(`../../assets/${props.id}.png`);
     
     const {attributes, listeners, setNodeRef, transform} = useDraggable({
@@ -23,4 +23,4 @@ const Draggable = (props) => {
       );
 }
  
-export default Draggable;
+export default Symbol;

@@ -1,6 +1,6 @@
 import { DndContext, DragEndEvent } from "@dnd-kit/core";
-import Draggable from "./Draggable";
-import Droppable from "./Droppable";
+import Symbol from "./Symbol";
+import Dropzone from "./Dropzone";
 import { useEffect, useState } from "react";
 
 const Symbols = () => {
@@ -48,17 +48,17 @@ const Symbols = () => {
             <DndContext onDragEnd={handleDragEnd}>
                 <div className="container">
                     <div className="symbols">
-                        <Draggable className="symbol" id="0" />
-                        <Draggable className="symbol" id="11" />
-                        <Draggable className="symbol" id="10" />
-                        <Draggable className="symbol" id="22" />
-                        <Draggable className="symbol" id="21" />
-                        <Draggable className="symbol" id="20" />
+                        <Symbol className="symbol" id="0" />
+                        <Symbol className="symbol" id="11" />
+                        <Symbol className="symbol" id="10" />
+                        <Symbol className="symbol" id="22" />
+                        <Symbol className="symbol" id="21" />
+                        <Symbol className="symbol" id="20" />
                     </div>
                     <div className="droppable">
-                        <div style={{ display: "flex", flexDirection: "column" }}><Droppable id="x" className="symbol dropzone">{x && x.img && <img alt="x" className="image" src={x?.img} />}</Droppable><span className="result">{xValue}</span></div>
-                        <div style={{ display: "flex", flexDirection: "column" }}><Droppable id="y" className="symbol dropzone">{y && y.img && <img alt="y" className="image" src={y?.img} />}</Droppable><span className="result">{yValue}</span></div>
-                        <div style={{ display: "flex", flexDirection: "column" }}><Droppable id="z" className="symbol dropzone">{z && z.img && <img alt="z" className="image" src={z?.img} />}</Droppable><span className="result">{zValue}</span></div>
+                        <div style={{ display: "flex", flexDirection: "column" }}><Dropzone id="x" className="symbol dropzone">{x && x.img && <img alt="x" className="image" src={x?.img} />}</Dropzone><span className="result">{xValue}</span></div>
+                        <div style={{ display: "flex", flexDirection: "column" }}><Dropzone id="y" className="symbol dropzone">{y && y.img && <img alt="y" className="image" src={y?.img} />}</Dropzone><span className="result">{yValue}</span></div>
+                        <div style={{ display: "flex", flexDirection: "column" }}><Dropzone id="z" className="symbol dropzone">{z && z.img && <img alt="z" className="image" src={z?.img} />}</Dropzone><span className="result">{zValue}</span></div>
                     </div>
                 </div>
             </DndContext>
