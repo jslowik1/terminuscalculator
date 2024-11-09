@@ -12,6 +12,7 @@ const Symbol = (props) => {
         }
       });
       const style = {
+        
         transform: CSS.Translate.toString(transform),
       }
     
