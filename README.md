@@ -1,0 +1,2 @@
+Calculator Terminis
+Copyright jslowik1
