@@ -33,13 +33,13 @@ const Symbols = () => {
 
     useEffect(() => {
         if (x && y && z) {
-            setYValue(Math.abs((2 * Number(z.value) + Number(y.value)) - 5));
+            setYValue((2 * Number(z.value) + Number(y.value)) - 5);
         }
     }, [x, y, z]);
 
     useEffect(() => {
         if (x && y && z) {
-            setZValue((Number(y.value) + Number(z.value)) - Number(x.value));
+            setZValue(Math.abs((Number(y.value) + Number(z.value)) - Number(x.value)));
         }
     }, [x, y, z])
 
